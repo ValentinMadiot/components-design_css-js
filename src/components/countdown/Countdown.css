@@ -1,0 +1,46 @@
+.countdown {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.giveaway {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.deadline {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.deadline-format {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  place-items: center;
+}
+
+.deadline-format h4 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.deadline-format span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

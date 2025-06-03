@@ -1,0 +1,72 @@
+import { useRef } from "react";
+import profileImage from "./img/profile-card-1.png";
+import "./ProfileCard1.css";
+
+const ProfileCard1 = () => {
+  const socialRef = useRef(null);
+
+  const handleToggle = () => {
+    const social = socialRef.current;
+
+    if (social.classList.contains("animation")) {
+      social.classList.remove("animation");
+      social.classList.add("down-animation");
+      setTimeout(() => {
+        social.classList.remove("down-animation");
+      }, 1000);
+    } else {
+      social.classList.add("animation");
+    }
+  };
+
+  return (
+    <div className="container">
+      <div className="card">
+        <div className="card__border">
+          <img src={profileImage} alt="user profil" className="card__img" />
+        </div>
+
+        <h3 className="card__name">Emily Jules</h3>
+        <span className="card__profession">UI/UX Designer</span>
+
+        <div className="card__social" ref={socialRef}>
+          <div className="card__social-control">
+            <div className="card__social-toggle" onClick={handleToggle}>
+              <i className="ri-add-line"></i>
+            </div>
+
+            <span className="card__social-text">My social networks</span>
+
+            <ul className="card__social-list">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="card__social-link">
+                <i className="ri-facebook-line"></i>
+              </a>
+
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="card__social-link">
+                <i className="ri-instagram-line"></i>
+              </a>
+
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="card__social-link">
+                <i className="ri-twitter-line"></i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileCard1;

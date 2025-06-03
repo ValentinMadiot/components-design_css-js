@@ -1,0 +1,171 @@
+/* ========== Fonts ========== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* ========== Variables ========== */
+:root {
+  --primary: hsl(175, 55%, 40%);
+  --primary-light: hsl(175, 30%, 48%);
+  --primary-lighter: hsl(175, 40%, 62%);
+  --gradient: linear-gradient(180deg, hsl(178, 35%, 45%), hsl(178, 55%, 28%));
+  --text: hsl(175, 8%, 50%);
+  --title: hsl(175, 40%, 16%);
+  --white: #fff;
+
+  --font-main: "Poppins", sans-serif;
+  --h2-size: 1.25rem;
+  --text-size: 0.938rem;
+  --small-text: 0.75rem;
+}
+
+.card {
+  width: 290px;
+  background: var(--gradient);
+  border-radius: 1rem 1rem 11rem 11rem;
+  padding: 2.5rem 1.5rem 3.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px hsla(178, 55%, 20%, 0.15);
+  position: relative;
+  font-family: var(--font-main);
+  color: var(--white);
+}
+
+.card__border {
+  width: 124px;
+  height: 124px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem;
+}
+
+.card__perfil {
+  width: 104px;
+  height: 104px;
+  background: var(--primary-lighter);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card__name {
+  font-size: var(--h2-size);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card__profession {
+  font-size: var(--small-text);
+  font-weight: 500;
+}
+
+/* ========== Info Section Hidden ========== */
+.info {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  border-radius: 1rem 1rem 11rem 11rem;
+  padding: 2.5rem 1.5rem 3.3rem;
+  clip-path: circle(16px at 250px 40px);
+  transition: clip-path 0.4s ease-in-out;
+}
+
+.info:hover {
+  clip-path: circle(75%);
+}
+
+.info__icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.info:hover .info__icon {
+  opacity: 0;
+}
+
+.info__border {
+  width: 64px;
+  height: 64px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+  transform: translateX(-3rem);
+  transition: transform 0.8s;
+}
+
+.info__perfil {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-lighter);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.info__data {
+  display: grid;
+  row-gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  transform: translateX(-4rem);
+  transition: transform 1s;
+}
+
+.info__name {
+  font-size: var(--text-size);
+  color: var(--title);
+}
+
+.info__profession,
+.info__location {
+  font-size: var(--small-text);
+  color: var(--text);
+}
+
+.info__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  transform: translateX(-5rem);
+  transition: transform 1.2s;
+}
+
+.info__social-link {
+  width: 32px;
+  height: 32px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: transform 0.3s;
+}
+
+.info__social-icon {
+  background: var(--gradient);
+  padding: 0.25rem;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.info__social-link:hover {
+  transform: translateY(-0.25rem);
+}
+
+.info:hover .info__border,
+.info:hover .info__data,
+.info:hover .info__social {
+  transform: translateX(0);
+}
