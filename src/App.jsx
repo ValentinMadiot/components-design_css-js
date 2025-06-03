@@ -1,36 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Components Design CSS/JS</title>
-    <link rel="stylesheet" href="main.css" />
-  </head>
-  <body>
+import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
+
+function App() {
+  return (
     <div class="container">
       <section>
-        <h1 id="reveal-text">🎨 Components Design CSS/JS</h1>
-        <p id="fade-text" class="hidden">Bienvenue sur mon site !</p>
+        <h1>🎨 Components Design CSS/JS</h1>
         <p>
           Collection de petits designs CSS/JS utilisables pour tes projets web.
         </p>
+        <AnimatedSearchBar />
       </section>
 
       <section class="inverse full-bleed">
         <h2>🖱 Boutons</h2>
-        <!-- <iframe
-          class="component-frame searchbar-frame"
-          src="components/animated-search-bar/index.html"
-          width="100%"
-          height="120"
-          style="border: none; overflow: hidden"></iframe>
-
-        <iframe
-          class="component-frame searchbar-frame"
-          src="components/coutdown/index.html"
-          width="100%"
-          height="120"
-          style="border: none; overflow: hidden"></iframe> -->
+        <p>Composants interactifs avec effets : hover, ripple, glowing, etc.</p>
       </section>
 
       <section>
@@ -58,5 +41,7 @@
         </p>
       </section>
     </div>
-  </body>
-</html>
+  );
+}
+
+export default App;
