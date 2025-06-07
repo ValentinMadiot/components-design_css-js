@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import profileImage from "./img/profile-card-1.png";
+import profileImage from "./assets/img/profile-card-1.png";
 import "./ProfileCard1.css";
 
 const ProfileCard1 = () => {
@@ -20,29 +20,29 @@ const ProfileCard1 = () => {
   };
 
   return (
-    <div className="container">
-      <div className="card">
-        <div className="card__border">
-          <img src={profileImage} alt="user profil" className="card__img" />
+    <div className="card1__container">
+      <div className="card1__card">
+        <div className="card1__border">
+          <img src={profileImage} alt="user profil" className="card1__img" />
         </div>
 
-        <h3 className="card__name">Emily Jules</h3>
-        <span className="card__profession">UI/UX Designer</span>
+        <h3 className="card1__name">Emily Jules</h3>
+        <span className="card1__profession">UI/UX Designer</span>
 
-        <div className="card__social" ref={socialRef}>
-          <div className="card__social-control">
-            <div className="card__social-toggle" onClick={handleToggle}>
+        <div className="card1__social" ref={socialRef}>
+          <div className="card1__social-control">
+            <div className="card1__social-toggle" onClick={handleToggle}>
               <i className="ri-add-line"></i>
             </div>
 
-            <span className="card__social-text">My social networks</span>
+            <span className="card1__social-text">My social networks</span>
 
-            <ul className="card__social-list">
+            <ul className="card1__social-list">
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="card__social-link">
+                className="card1__social-link">
                 <i className="ri-facebook-line"></i>
               </a>
 
@@ -50,7 +50,7 @@ const ProfileCard1 = () => {
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="card__social-link">
+                className="card1__social-link">
                 <i className="ri-instagram-line"></i>
               </a>
 
@@ -58,7 +58,7 @@ const ProfileCard1 = () => {
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="card__social-link">
+                className="card1__social-link">
                 <i className="ri-twitter-line"></i>
               </a>
             </ul>

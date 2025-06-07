@@ -8,7 +8,7 @@
   --first-color: hsl(29, 80%, 58%);
   --first-color-light: hsl(29, 80%, 70%);
   --black-color: hsl(29, 16%, 10%);
-  --text-color: hsl(29, 8%, 65%);
+  --color-text: hsl(29, 8%, 65%);
   --body-color: hsl(29, 100%, 99%);
 
   /*========== Font and typography ==========*/
@@ -83,7 +83,7 @@ img {
 }
 
 .card__profession {
-  color: var(--text-color);
+  color: var(--color-text);
   font-size: var(--smaller-font-size);
   font-weight: 500;
 }

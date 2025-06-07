@@ -1,4 +1,5 @@
 import "./ProfileCard2.css";
+import profileImage from "./img/profile-card-2.png";
 
 const ProfileCard2 = () => {
   return (
@@ -6,11 +7,7 @@ const ProfileCard2 = () => {
       <div className="card">
         <div className="card__border">
           <div className="card__perfil">
-            <img
-              src="./img/profile-card-2.png"
-              alt="user profil"
-              className="card__img"
-            />
+            <img src={profileImage} alt="user profil" className="card__img" />
           </div>
         </div>
 
@@ -24,11 +21,7 @@ const ProfileCard2 = () => {
 
           <div className="info__border">
             <div className="info__perfil">
-              <img
-                src="./img/profile-card-2.png"
-                alt="user profil"
-                className="info__img"
-              />
+              <img src={profileImage} alt="user profil" className="card__img" />
             </div>
           </div>
 

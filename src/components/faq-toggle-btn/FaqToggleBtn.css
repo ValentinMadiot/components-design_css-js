@@ -35,7 +35,7 @@
 .question-title p {
   margin: 0;
   font-weight: 600;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .question-btn {
@@ -59,7 +59,7 @@
 
 .question-text p {
   margin: 0;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .show-text .question-text {

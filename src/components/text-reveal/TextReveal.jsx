@@ -1,27 +1,24 @@
 import { motion } from "framer-motion";
 import regexString from "./regexString";
-
-// Texte
-const heading = "🎨 Bienvenue sur Components Design UI";
-const text = `
-  Découvrez une collection de composants visuels modernes et animés (boutons, cartes, loaders, effets de texte…) prêts à être intégrés dans vos projets web. Chaque élément est pensé pour améliorer l’esthétique et l’interaction de vos interfaces, tout en restant simple à intégrer.
-`;
-
-// Setup animation variants
-const charVariants = {
-  hidden: { opacity: 0 },
-  reveal: { opacity: 1 },
-};
+import "./textReveal.css";
 
 function TextReveal() {
-  const headingChars = regexString(heading);
-  const textChars = regexString(text);
+  const headingChars = regexString("Composants Design UI");
+  const textChars = regexString(
+    "Découvrez une collection de composants visuels modernes et animés"
+  );
+
+  const charVariants = {
+    hidden: { opacity: 0 },
+    reveal: { opacity: 1 },
+  };
 
   return (
-    <>
+    <div className="text-reveal">
       <motion.h1
         initial="hidden"
         whileInView="reveal"
+        viewport={{ once: true }}
         transition={{ staggerChildren: 0.04 }}>
         {headingChars.map((char, i) => (
           <motion.span
@@ -36,6 +33,7 @@ function TextReveal() {
       <motion.p
         initial="hidden"
         whileInView="reveal"
+        viewport={{ once: true }}
         transition={{ staggerChildren: 0.02 }}>
         {textChars.map((char, i) => (
           <motion.span
@@ -46,7 +44,7 @@ function TextReveal() {
           </motion.span>
         ))}
       </motion.p>
-    </>
+    </div>
   );
 }
 
