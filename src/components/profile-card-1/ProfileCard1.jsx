@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import profileImage from "./assets/img/profile-card-1.png";
-import "./ProfileCard1.css";
+import "./profileCard1.css";
 
 const ProfileCard1 = () => {
   const socialRef = useRef(null);

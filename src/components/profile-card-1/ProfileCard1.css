@@ -1,4 +1,6 @@
+/* ============== Fonts ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 /*=============== Variables ===============*/
 :root {
   --first-color-card1: hsl(29, 80%, 58%);
@@ -75,7 +77,7 @@
   transform-origin: 18px 17px;
 }
 
-/*=============== Toggle */
+/*=============== Toggle ===============*/
 .card1__social-control {
   position: relative;
   transform-origin: 18px 18px;
@@ -95,7 +97,7 @@
   z-index: 10;
 }
 
-/* Text & Links */
+/*=============== Text & Links ===============*/
 .card1__social-text,
 .card1__social-list {
   position: absolute;

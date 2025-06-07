@@ -1,7 +1,6 @@
 // import Home from "./pages/Home";
-
-import ProfileCard1 from "./components/profile-card-1/ProfileCard1";
-// import ProfileCard2 from "./components/profile-card-2/ProfileCard2";
+// import ProfileCard1 from "./components/profile-card-1/ProfileCard1";
+import ProfileCard2 from "./components/profile-card-2/ProfileCard2";
 
 // // SECTION 2
 // import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
@@ -21,8 +20,8 @@ import ProfileCard1 from "./components/profile-card-1/ProfileCard1";
 function App() {
   return (
     // <Home />
-    <ProfileCard1 />
-    //     <ProfileCard2 />
+    // <ProfileCard1 />
+    <ProfileCard2 />
 
     //   <section className="section-components inverse full-bleed">
     //     <AnimatedSearchBar />

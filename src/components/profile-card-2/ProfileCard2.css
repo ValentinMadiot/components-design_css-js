@@ -1,101 +1,120 @@
-/* ========== Fonts ========== */
+/*=============== Fonts ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* ========== Variables ========== */
+/*=============== Variables ===============*/
 :root {
-  --primary: hsl(175, 55%, 40%);
-  --primary-light: hsl(175, 30%, 48%);
-  --primary-lighter: hsl(175, 40%, 62%);
-  --gradient: linear-gradient(180deg, hsl(178, 35%, 45%), hsl(178, 55%, 28%));
-  --text: hsl(175, 8%, 50%);
-  --title: hsl(175, 40%, 16%);
-  --white: #fff;
+  --first-color-card2: hsl(175, 55%, 40%);
+  --first-color-light-card2: hsl(175, 30%, 48%);
+  --first-color-lighter-card2: hsl(175, 40%, 62%);
+  --color-bg-card2: #195a5a;
+  --color-gradient-card2: linear-gradient(
+    180deg,
+    hsl(178, 35%, 45%),
+    hsl(178, 55%, 28%)
+  );
+  --text-color-card2: hsl(175, 8%, 50%);
+  --title-color-card2: hsl(175, 40%, 16%);
 
-  --font-main: "Poppins", sans-serif;
-  --h2-size: 1.25rem;
-  --text-size: 0.938rem;
-  --small-text: 0.75rem;
+  --font-family-card2: "Poppins", sans-serif;
+  --title-size-card2: 1.25rem;
+  --text-size-card2: 0.938rem;
+  --small-text-card2: 0.75rem;
 }
 
-.card {
+/*=============== Card Container ===============*/
+.card2__container {
+  font-family: var(--font-family-card2);
+  font-size: var(--text-size-card2);
+  background-color: var(--color-bg-card2);
+  color: var(--text-color-card2);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.card2__card {
+  position: relative;
   width: 290px;
-  background: var(--gradient);
+  background: var(--color-gradient-card2);
   border-radius: 1rem 1rem 11rem 11rem;
   padding: 2.5rem 1.5rem 3.5rem;
   text-align: center;
   box-shadow: 0 8px 32px hsla(178, 55%, 20%, 0.15);
-  position: relative;
-  font-family: var(--font-main);
-  color: var(--white);
 }
-
-.card__border {
+.card2__img {
+  width: 90px;
+}
+.card2__border {
   width: 124px;
   height: 124px;
-  background: var(--primary-light);
+  background: var(--first-color-light-card2);
   border-radius: 50%;
+  margin: 0 auto 1rem;
   display: grid;
   place-items: center;
-  margin: 0 auto 1rem;
 }
-
-.card__perfil {
+.card2__profil {
   width: 104px;
   height: 104px;
-  background: var(--primary-lighter);
+  background: var(--first-color-lighter-card2);
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 }
-
-.card__name {
-  font-size: var(--h2-size);
+.card2__name,
+.card2__profession {
+  color: var(--white-color);
+}
+.card2__name {
+  font-size: var(--title-size-card2);
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
-
-.card__profession {
-  font-size: var(--small-text);
+.card2__profession {
+  font-size: var(--small-text-card2);
   font-weight: 500;
 }
 
-/* ========== Info Section Hidden ========== */
-.info {
+/*=============== Info Section Hidden ===============*/
+.card2__info {
   position: absolute;
   top: -1px;
   left: 0;
   width: 100%;
-  background: var(--white);
-  border-radius: 1rem 1rem 11rem 11rem;
+  background: var(--white-color);
   padding: 2.5rem 1.5rem 3.3rem;
+  border-radius: 1rem 1rem 11rem 11rem;
   clip-path: circle(16px at 250px 40px);
   transition: clip-path 0.4s ease-in-out;
 }
-
-.info:hover {
+.card2__info:hover {
   clip-path: circle(75%);
 }
 
-.info__icon {
+.card2__info-icon {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
   font-size: 1.5rem;
-  color: var(--primary);
+  color: var(--first-color-card2);
+  display: inline-flex;
+  padding: 0.25rem;
   cursor: pointer;
   transition: opacity 0.3s;
 }
-
-.info:hover .info__icon {
+.card2__info:hover .card2__info-icon {
   opacity: 0;
 }
 
-.info__border {
+.card2__img2 {
+  width: 45px;
+}
+
+.card2__info-border {
   width: 64px;
   height: 64px;
-  background: var(--primary-light);
+  background: var(--first-color-light-card2);
   border-radius: 50%;
   margin: 0 auto 1rem;
   display: grid;
@@ -104,10 +123,10 @@
   transition: transform 0.8s;
 }
 
-.info__perfil {
+.card2__info-profil {
   width: 52px;
   height: 52px;
-  background: var(--primary-lighter);
+  background: var(--first-color-lighter-card2);
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -115,7 +134,7 @@
   align-items: flex-end;
 }
 
-.info__data {
+.card2__info-data {
   display: grid;
   row-gap: 0.25rem;
   margin-bottom: 1.5rem;
@@ -123,49 +142,50 @@
   transition: transform 1s;
 }
 
-.info__name {
-  font-size: var(--text-size);
-  color: var(--title);
+.card2__info-name {
+  font-size: var(--text-size-card2);
+  color: var(--title-color-card2);
 }
 
-.info__profession,
-.info__location {
-  font-size: var(--small-text);
-  color: var(--text);
+.card2__info-profession,
+.card2__info-location {
+  font-size: var(--small-text-card2);
 }
 
-.info__social {
+.card2__info-social {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  column-gap: 1rem;
   transform: translateX(-5rem);
   transition: transform 1.2s;
 }
 
-.info__social-link {
+.card2__social-link {
   width: 32px;
   height: 32px;
-  background: var(--primary-light);
+  background: var(--first-color-light-card2);
   border-radius: 50%;
   display: grid;
   place-items: center;
   transition: transform 0.3s;
 }
 
-.info__social-icon {
-  background: var(--gradient);
+.card2__social-icon {
+  display: inline-flex;
+  background: var(--color-gradient-card2);
   padding: 0.25rem;
   border-radius: 50%;
-  color: var(--white);
+  color: var(--white-color);
   font-size: 1rem;
 }
 
-.info__social-link:hover {
+/* Card info animation */
+.card2__social-link:hover {
   transform: translateY(-0.25rem);
 }
 
-.info:hover .info__border,
-.info:hover .info__data,
-.info:hover .info__social {
+.card2__info:hover .card2__info-border,
+.card2__info:hover .card2__info-data,
+.card2__info:hover .card2__info-social {
   transform: translateX(0);
 }
