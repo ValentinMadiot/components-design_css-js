@@ -5,11 +5,11 @@
 // import TabsHideArticle from "./components/tabs-hide-article/TabsHideArticle";
 // import Countdown from "./components/countdown/Countdown";
 // import LoadingAnimationDots from "./components/loading-animation-dots/LoadingAnimationDots";
-import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
+// import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
+import RangeSlider from "./components/range-slider/RangeSlider";
 
 // import AudioVisualizer from "./components/audio-visualizer/AudioVisualizer";
 // import FloatingActionButton from "./components/floating-action-button/FloatingActionButton";
-// import RangeSlider from "./components/range-slider/RangeSlider";
 
 // import ColorGradientTool from "./components/color-gradient-tool/ColorGradientTool";
 
@@ -26,9 +26,9 @@ function App() {
     // <LoadingAnimationDots />
 
     // <Countdown />
-    <AnimatedSearchBar />
+    // <AnimatedSearchBar />
 
-    // <RangeSlider />
+    <RangeSlider />
     // <FloatingActionButton />
     // <AudioVisualizer />
 

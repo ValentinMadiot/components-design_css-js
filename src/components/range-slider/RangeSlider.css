@@ -1,38 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 
-:root {
-  --gradient-color: linear-gradient(
-    95deg,
-    hsl(286, 97%, 57%) -7%,
-    hsl(256, 84%, 48%) 112%
-  );
-  --first-color-light: hsl(256, 64%, 88%);
-  --first-color-lighten: hsl(256, 58%, 94%);
-  --white-color: hsl(0, 0%, 100%);
-  --font-montserrat: "Montserrat", sans-serif;
-  --font-size-lg: 1.5rem;
-}
-
-/* Wrapper spécifique au composant */
-.range-slider-container {
-  font-family: var(--font-montserrat);
-  margin-inline: 1.5rem;
+/* Conteneur global centré */
+.range__container {
+  min-height: 100vh;
+  padding-inline: 1.5rem;
   display: grid;
   place-items: center;
+  background-color: hsl(256, 100%, 98%);
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Boîte principale */
+/* Bloc principal du slider */
 .range {
   height: 64px;
   width: 100%;
   max-width: 332px;
-  background-color: var(--first-color-light);
+  background-color: hsl(256, 64%, 88%);
   border-radius: 4rem;
-  box-shadow: 0 6px 16px hsla(256, 72%, 24%, 0.15);
+  box-shadow: 0 6px 16px rgba(64, 36, 122, 0.15);
   padding-inline: 2.5rem;
   display: grid;
 }
 
+/* Centre du composant */
 .range__content {
   position: relative;
   width: 100%;
@@ -40,38 +30,48 @@
   place-items: center;
 }
 
-/* Ligne de fond */
+/* Piste de fond du slider */
 .range__slider {
   width: 100%;
   height: 16px;
-  background-color: var(--first-color-lighten);
+  background-color: hsl(256, 58%, 94%);
   border-radius: 4rem;
-  box-shadow: 0 4px 12px hsla(256, 72%, 24%, 0.2);
+  box-shadow: 0 4px 12px rgba(64, 36, 122, 0.2);
   overflow: hidden;
 }
 
-/* Barre de progression */
+/* Barre de progression dynamique */
 .range__slider-line {
   height: 100%;
-  background: var(--gradient-color);
   width: 0;
+  background: linear-gradient(
+    95deg,
+    hsl(286, 97%, 57%) -7%,
+    hsl(256, 84%, 48%) 112%
+  );
 }
 
-/* Curseur */
+/* Curseur circulaire */
 .range__thumb {
   width: 32px;
   height: 32px;
-  background-color: var(--first-color-lighten);
+  background-color: hsl(256, 58%, 94%);
   border-radius: 50%;
-  box-shadow: 0 0 12px hsla(256, 72%, 24%, 0.2);
+  box-shadow: 0 0 12px rgba(64, 36, 122, 0.2);
   position: absolute;
+  top: calc(50% - 16px);
+  /* transition: left 0.3s ease; */
 }
 
-/* Valeur du curseur */
+/* Bulle de valeur au-dessus du curseur */
 .range__value {
   width: 64px;
   height: 64px;
-  background: var(--gradient-color);
+  background: linear-gradient(
+    95deg,
+    hsl(286, 97%, 57%) -7%,
+    hsl(256, 84%, 48%) 112%
+  );
   position: absolute;
   top: -82px;
   left: -16px;
@@ -79,12 +79,14 @@
   transform: rotate(-45deg);
   display: grid;
   place-items: center;
+  z-index: 1;
 }
 
+/* Valeur affichée (rotée pour alignement) */
 .range__value-number {
   transform: rotate(45deg);
-  color: var(--white-color);
-  font-size: var(--font-size-lg);
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 /* Input invisible mais actif */
@@ -93,15 +95,21 @@
   width: 100%;
   height: 16px;
   position: absolute;
+  /* top: 0; */
+  left: 0;
   opacity: 0;
+  cursor: pointer;
 }
 
+/* Styles pour le curseur personnalisé sur Webkit */
 .range__input::-webkit-slider-thumb {
   appearance: none;
   width: 32px;
   height: 32px;
+  background: transparent;
 }
 
+/* Curseur survolé */
 .range__input::-webkit-slider-thumb:hover {
   cursor: pointer;
 }

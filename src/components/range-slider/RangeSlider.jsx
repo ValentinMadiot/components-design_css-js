@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./RangeSlider.css";
+import "./rangeSlider.css";
 
 const RangeSlider = () => {
   const [value, setValue] = useState(50);
@@ -12,19 +12,24 @@ const RangeSlider = () => {
     const thumb = thumbRef.current;
     const line = lineRef.current;
 
-    const thumbPosition = value / input.max;
-    const space = input.offsetWidth - thumb.offsetWidth;
+    if (!input || !thumb || !line) return;
 
-    thumb.style.left = `${thumbPosition * space}px`;
-    line.style.width = `${value}%`;
+    const max = Number(input.max);
+    const percent = value / max;
+
+    const space = input.offsetWidth - thumb.offsetWidth;
+    const position = percent * space;
+
+    thumb.style.left = `${position}px`;
+    line.style.width = `${percent * 100}%`;
   }, [value]);
 
   const handleChange = (e) => {
-    setValue(e.target.value);
+    setValue(Number(e.target.value));
   };
 
   return (
-    <div className="range-slider-container">
+    <div className="range__container">
       <div className="range">
         <div className="range__content">
           <div className="range__slider">
