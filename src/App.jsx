@@ -3,12 +3,12 @@
 // import ProfileCard2 from "./components/profile-card-2/ProfileCard2";
 // import FaqToggleBtn from "./components/faq-toggle-btn/FaqToggleBtn";
 // import TabsHideArticle from "./components/tabs-hide-article/TabsHideArticle";
-import Countdown from "./components/countdown/Countdown";
+// import Countdown from "./components/countdown/Countdown";
+import LoadingAnimationDots from "./components/loading-animation-dots/LoadingAnimationDots";
 
 // import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
 // import AudioVisualizer from "./components/audio-visualizer/AudioVisualizer";
 // import FloatingActionButton from "./components/floating-action-button/FloatingActionButton";
-// import LoadingAnimationDots from "./components/loading-animation-dots/LoadingAnimationDots";
 // import RangeSlider from "./components/range-slider/RangeSlider";
 
 // import ColorGradientTool from "./components/color-gradient-tool/ColorGradientTool";
@@ -23,8 +23,9 @@ function App() {
     // <FaqToggleBtn />
     // <TabsHideArticle />
 
-    <Countdown />
-    //     <LoadingAnimationDots />
+    <LoadingAnimationDots />
+
+    // <Countdown />
 
     //   <section className="section-components inverse full-bleed">
     //     <RangeSlider />

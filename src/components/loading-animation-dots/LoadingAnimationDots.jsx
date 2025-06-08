@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./LoadingAnimationDots.css";
+import "./loadingAnimationDots.css";
 
 const LoadingAnimationDots = () => {
   const dotsRef = useRef(null);
@@ -30,17 +30,19 @@ const LoadingAnimationDots = () => {
   }, []);
 
   return (
-    <h1 className="loading">
-      Loading
-      <div className="loading__dots" ref={dotsRef}>
-        <span className="loading__dot"></span>
-        <span className="loading__dot"></span>
-        <span className="loading__dot"></span>
-        <span className="loading__dot">
-          <span className="loading__dot-down"></span>
-        </span>
-      </div>
-    </h1>
+    <section className="loading__container">
+      <h1 className="loading__title">
+        Loading
+        <div className="loading__dots" ref={dotsRef}>
+          <span className="loading__dot"></span>
+          <span className="loading__dot"></span>
+          <span className="loading__dot"></span>
+          <span className="loading__dot">
+            <span className="loading__dot-down"></span>
+          </span>
+        </div>
+      </h1>
+    </section>
   );
 };
 

@@ -1,72 +1,92 @@
-.loading {
-  color: var(--color-text);
-  font-size: var(--loading-font-size);
-  font-family: var(--body-font);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+
+/* Conteneur principal centré */
+.loading__container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(0, 0%, 96%);
+  overflow: hidden;
 }
 
+/* Titre + points */
+.loading__title {
+  color: hsl(0, 0%, 12%);
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* Ensemble des points */
 .loading__dots {
   display: inline-flex;
   column-gap: 0.25rem;
-  position: relative; /* Ajouté pour positionner dot 1 correctement */
+  position: relative;
+  margin-bottom: 0.5rem;
 }
 
+/* Point classique */
 .loading__dot {
   position: relative;
   width: 8px;
   height: 8px;
-  background-color: var(--color-text);
+  background-color: hsl(0, 0%, 12%);
   border-radius: 50%;
 }
 
+/* Dot 1 (caché au départ) */
 .loading__dot:nth-child(1) {
   position: absolute;
   transform: scale(0);
 }
 
+/* Dot 4 est transparent pour contenir dot-down */
 .loading__dot:nth-child(4) {
   background: transparent;
 }
 
+/* Dot qui tombe */
 .loading__dot-down {
   display: block;
   width: 8px;
   height: 8px;
-  background-color: var(--color-text);
+  background-color: hsl(0, 0%, 12%);
   border-radius: 50%;
   transform: translate(0);
 }
 
-/* Animations */
+/* === ANIMATIONS === */
 .animate .loading__dot:nth-child(1) {
-  animation: scale-dot 0.8s 0.2s forwards;
+  animation: loading__scale-dot 0.8s 0.2s forwards;
 }
 
 .animate .loading__dot:nth-child(2),
 .animate .loading__dot:nth-child(3) {
-  animation: move-right 0.6s forwards;
+  animation: loading__move-right 0.6s forwards;
 }
 
 .animate .loading__dot-down {
-  animation: move-right-down 0.8s 0.2s forwards linear,
-    move-down 2.8s 0.3s forwards ease-in;
+  animation: loading__move-right-down 0.8s 0.2s forwards linear,
+    loading__move-down 2.8s 0.3s forwards ease-in;
 }
 
-@keyframes scale-dot {
+@keyframes loading__scale-dot {
   100% {
     transform: scale(1);
   }
 }
 
-@keyframes move-right {
+@keyframes loading__move-right {
   100% {
     transform: translateX(0.75rem);
   }
 }
 
-@keyframes move-right-down {
+@keyframes loading__move-right-down {
   50% {
     transform: translate(1.5rem, 0.25rem);
   }
@@ -75,7 +95,7 @@
   }
 }
 
-@keyframes move-down {
+@keyframes loading__move-down {
   100% {
     transform: translate(10rem, 80vh);
   }
