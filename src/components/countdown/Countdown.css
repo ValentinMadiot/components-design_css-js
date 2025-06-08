@@ -1,46 +1,82 @@
-.countdown {
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/* Base */
+.countdown__section {
   width: 100%;
-  padding: 2rem;
+  padding: 5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: var(--color-text);
+  font-family: "Open Sans", sans-serif;
+  background: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%);
+  line-height: 1.5;
+  font-size: 0.875rem;
   text-align: center;
 }
 
-.giveaway {
+/* Message de fin */
+.countdown__giveaway {
   font-size: 1rem;
   margin-bottom: 2rem;
-  color: var(--accent-color);
+  color: hsl(205, 63%, 48%);
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.deadline {
+/* Bloc du compte à rebours */
+.countdown__deadline {
   display: flex;
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.deadline-format {
-  background: #1e1e1e;
+/* Bloc individuel (jours, heures, etc.) */
+.countdown__deadline-format {
+  background: hsl(209, 61%, 16%);
+  color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
   width: 6rem;
   height: 6rem;
   display: grid;
   place-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.countdown__deadline-format:hover {
+  /* transform: translateY(-5px); */
 }
 
-.deadline-format h4 {
-  font-size: 1.75rem;
+/* Chiffres */
+.countdown__deadline-format h4 {
+  font-size: 2rem;
   margin-bottom: 0.25rem;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.deadline-format span {
+/* Libellés (jours, heures, etc.) */
+.countdown__deadline-format span {
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  color: hsl(210, 22%, 89%);
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  .countdown__giveaway {
+    font-size: 1.25rem;
+  }
+  .countdown__deadline-format {
+    width: 7rem;
+    height: 7rem;
+  }
+  .countdown__deadline-format h4 {
+    font-size: 2.25rem;
+  }
 }

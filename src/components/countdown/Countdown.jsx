@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Countdown.css";
+import "./countdown.css";
 
 const months = [
   "Janvier",
@@ -27,10 +27,10 @@ const weekdays = [
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
-    days: "00",
-    hours: "00",
+    jours: "00",
+    heures: "00",
     minutes: "00",
-    seconds: "00",
+    secondes: "00",
   });
   const [expired, setExpired] = useState(false);
   const [endMessage, setEndMessage] = useState("");
@@ -77,10 +77,10 @@ const Countdown = () => {
         setExpired(true);
       } else {
         setTimeLeft({
-          days: format(days),
-          hours: format(hours),
+          jours: format(days),
+          heures: format(hours),
           minutes: format(minutes),
-          seconds: format(seconds),
+          secondes: format(seconds),
         });
       }
     }, 1000);
@@ -89,15 +89,15 @@ const Countdown = () => {
   }, []);
 
   return (
-    <section className="countdown">
-      <article className="countdown-info">
-        <h4 className="giveaway">
+    <section className="countdown__section">
+      <article className="countdown__info">
+        <h4 className="countdown__giveaway">
           {expired ? "Désolé, ce concours est expiré." : endMessage}
         </h4>
         {!expired && (
-          <div className="deadline">
+          <div className="countdown__deadline">
             {Object.entries(timeLeft).map(([label, value]) => (
-              <div className="deadline-format" key={label}>
+              <div className="countdown__deadline-format" key={label}>
                 <div>
                   <h4>{value}</h4>
                   <span>{label}</span>
