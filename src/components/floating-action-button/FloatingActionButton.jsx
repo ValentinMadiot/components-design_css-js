@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./FloatingActionButton.css";
+import "./floatingActionButton.css";
 
 const FloatingActionButton = () => {
   const [isActive, setIsActive] = useState(false);
