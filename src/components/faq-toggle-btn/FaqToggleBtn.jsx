@@ -1,31 +1,27 @@
 import { useState } from "react";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
-import "./FaqToggleBtn.css";
+import "./faqToggleBtn.css";
 
 const Question = ({ title, text }) => {
   const [showText, setShowText] = useState(false);
 
   return (
-    <article className={`question ${showText ? "show-text" : ""}`}>
-      <div className="question-title">
+    <article className={`faq__question ${showText ? "faq__show-text" : ""}`}>
+      <div className="faq__question-title">
         <p>{title}</p>
         <button
           type="button"
-          className="question-btn"
+          className="faq__question-btn"
           onClick={() => setShowText(!showText)}>
-          <span className="plus-icon">
+          <span className="faq__plus-icon">
             <FaPlusSquare />
           </span>
-          <span className="minus-icon">
+          <span className="faq__minus-icon">
             <FaMinusSquare />
           </span>
         </button>
       </div>
-      {showText && (
-        <div className="question-text">
-          <p>{text}</p>
-        </div>
-      )}
+      <div className="faq__question-text">{showText && <p>{text}</p>}</div>
     </article>
   );
 };
@@ -33,25 +29,25 @@ const Question = ({ title, text }) => {
 const Questions = () => {
   const questionsData = [
     {
-      title: "do you accept all major credit cards?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus quaerat, magni numquam repellat reprehenderit.",
+      title: "Acceptez-vous toutes les cartes de crédit ?",
+      text: "Oui, nous acceptons toutes les grandes cartes de crédit, y compris Visa, MasterCard, American Express et d'autres.",
     },
     {
-      title: "do you support local farmers?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus quaerat, magni numquam repellat reprehenderit.",
+      title: "Soutenez-vous les agriculteurs locaux ?",
+      text: "Absolument ! Nous travaillons avec des producteurs locaux pour garantir des produits frais et de qualité tout en soutenant l’économie de la région.",
     },
     {
-      title: "do you use organic ingredients?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus quaerat, magni numquam repellat reprehenderit.",
+      title: "Utilisez-vous des ingrédients biologiques ?",
+      text: "Oui, dans la mesure du possible, nous privilégions les ingrédients biologiques pour offrir des plats sains et respectueux de l’environnement.",
     },
   ];
 
   return (
-    <section className="questions">
-      <div className="title">
-        <h2>general questions</h2>
+    <section className="faq__questions">
+      <div className="faq__title">
+        <h2>Questions Général</h2>
       </div>
-      <div className="questions-container">
+      <div className="faq__section">
         {questionsData.map((q, index) => (
           <Question key={index} title={q.title} text={q.text} />
         ))}
