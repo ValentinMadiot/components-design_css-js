@@ -1,86 +1,79 @@
 import { useState } from "react";
-import "./style.css";
+import imgArticle from "./assets/img/tabs-hide-article.jpg";
+import "./tabsHideArticle.css";
 
 const tabsData = [
   {
-    id: "history",
-    title: "history",
+    id: "foret",
+    title: "Forêt",
     content: (
       <p>
-        I'm baby wolf pickled schlitz try-hard normcore marfa man bun mumblecore
-        vice pop-up XOXO lomo kombucha glossier bicycle rights. Umami kinfolk
-        salvia jean shorts offal venmo. Knausgaard tilde try-hard, woke fixie
-        banjo man bun. Small batch tumeric mustache tbh wayfarers 8-bit shaman
-        chartreuse tacos. Viral direct trade hoodie ugh chambray, craft beer
-        pork belly flannel tacos single-origin coffee art party migas plaid
-        pop-up.
+        Les forêts abritent une biodiversité incroyable et jouent un rôle
+        essentiel dans le maintien de l'équilibre climatique. Elles fournissent
+        de l’oxygène, abritent de nombreuses espèces et filtrent l’air que nous
+        respirons.
       </p>
     ),
   },
   {
-    id: "vision",
-    title: "vision",
+    id: "oceans",
+    title: "Océans",
     content: (
       <>
         <p>
-          Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth
-          crucifix offal deep v hella biodiesel. Church-key listicle polaroid
-          put a bird on it chillwave palo santo enamel pin, tattooed meggings
-          franzen la croix cray. Retro yr aesthetic four loko tbh helvetica air
-          plant, neutra palo santo tofu mumblecore. Hoodie bushwick pour-over
-          jean shorts chartreuse shabby chic. Roof party hammock master cleanse
-          pop-up truffaut, bicycle rights skateboard affogato readymade
-          sustainable deep v live-edge schlitz narwhal.
+          Les océans couvrent plus de 70 % de la surface terrestre. Ils régulent
+          le climat, abritent des écosystèmes riches et produisent une grande
+          partie de l'oxygène que nous respirons.
         </p>
         <ul>
-          <li>list item</li>
-          <li>list item</li>
-          <li>list item</li>
+          <li>Préservation des récifs coralliens</li>
+          <li>Réduction de la pollution plastique</li>
+          <li>Protection des espèces marines</li>
         </ul>
       </>
     ),
   },
   {
-    id: "goals",
-    title: "goals",
+    id: "montagnes",
+    title: "Montagnes",
     content: (
       <p>
-        Chambray authentic truffaut, kickstarter brunch taxidermy vape heirloom
-        four dollar toast raclette shoreditch church-key. Poutine etsy tote bag,
-        cred fingerstache leggings cornhole everyday carry blog gastropub.
-        Brunch biodiesel sartorial mlkshk swag, mixtape hashtag marfa readymade
-        direct trade man braid cold-pressed roof party. Small batch adaptogen
-        coloring book heirloom. Letterpress food truck hammock literally hell of
-        wolf beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie, banh
-        mi salvia venmo photo booth quinoa chicharrones.
+        Les montagnes offrent des paysages spectaculaires et sont essentielles
+        pour l’approvisionnement en eau douce. Elles abritent également des
+        communautés uniques et une faune adaptée aux altitudes élevées.
       </p>
     ),
   },
 ];
 
 const TabsHideArticle = () => {
-  const [activeTab, setActiveTab] = useState("history");
+  // const [activeTab, setActiveTab] = useState("oceans");
+  //* ===
+  const [activeTab, setActiveTab] = useState(tabsData[1].id);
 
   return (
-    <section className="section">
-      <div className="title">
-        <h2>about</h2>
+    <section className="tabs__section">
+      <div className="tabs__title">
+        <h2>À la découverte de la nature</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-          aperiam!
+          Explorez les merveilles de notre planète : forêts luxuriantes, océans
+          profonds et montagnes majestueuses. Chaque environnement joue un rôle
+          unique dans l’équilibre écologique de la Terre.
         </p>
       </div>
 
-      <div className="about-center section-center">
-        <article className="about-img">
-          <img src="./img/tabs-hide-article.jpg" alt="" />
+      <div className="tabs__about-center tabs__section-center">
+        <article className="tabs__about-img">
+          <img src={imgArticle} alt="" />
         </article>
-        <article className="about">
-          <div className="btn-container">
+        <article className="tabs__about">
+          <div className="tabs__about-btn">
             {tabsData.map((tab) => (
               <button
                 key={tab.id}
-                className={`tab-btn ${activeTab === tab.id ? "active" : ""}`}
+                className={`tabs__tab-btn ${
+                  activeTab === tab.id ? "active" : ""
+                }`}
                 data-id={tab.id}
                 onClick={() => setActiveTab(tab.id)}>
                 {tab.title}
@@ -88,13 +81,15 @@ const TabsHideArticle = () => {
             ))}
           </div>
 
-          <div className="about-content">
+          <div className="tabs__about-content">
             {tabsData.map((tab) => (
               <div
                 key={tab.id}
-                className={`content ${activeTab === tab.id ? "active" : ""}`}
+                className={`tabs__content ${
+                  activeTab === tab.id ? "active" : ""
+                }`}
                 id={tab.id}>
-                <h4>{tab.title}</h4>
+                {/* <h4>{tab.title}</h4> */}
                 {tab.content}
               </div>
             ))}
