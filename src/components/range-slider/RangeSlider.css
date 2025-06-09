@@ -2,11 +2,12 @@
 
 /* Conteneur global centré */
 .range__container {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  padding: 4rem 0 2rem 0;
   padding-inline: 1.5rem;
   display: grid;
   place-items: center;
-  background-color: hsl(256, 100%, 98%);
+  background: var(--color-section);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -15,9 +16,11 @@
   height: 64px;
   width: 100%;
   max-width: 332px;
-  background-color: hsl(256, 64%, 88%);
+  background-color: hsl(45, 64%, 88%);
+  /* background-color: hsl(256, 64%, 88%); */
   border-radius: 4rem;
-  box-shadow: 0 6px 16px rgba(64, 36, 122, 0.15);
+  box-shadow: 0 6px 16px rgba(180, 140, 40, 0.15);
+  /* box-shadow: 0 6px 16px rgba(64, 36, 122, 0.15); */
   padding-inline: 2.5rem;
   display: grid;
 }
@@ -34,9 +37,11 @@
 .range__slider {
   width: 100%;
   height: 16px;
-  background-color: hsl(256, 58%, 94%);
+  background-color: hsl(45, 58%, 94%);
+  /* background-color: hsl(256, 58%, 94%); */
   border-radius: 4rem;
-  box-shadow: 0 4px 12px rgba(64, 36, 122, 0.2);
+  box-shadow: 0 4px 12px rgba(180, 140, 40, 0.2);
+  /* box-shadow: 0 4px 12px rgba(64, 36, 122, 0.2); */
   overflow: hidden;
 }
 
@@ -46,9 +51,14 @@
   width: 0;
   background: linear-gradient(
     95deg,
+    hsl(45, 97%, 57%) -7%,
+    /* or vif */ hsl(40, 84%, 48%) 112% /* or profond */
+  );
+  /* background: linear-gradient(
+    95deg,
     hsl(286, 97%, 57%) -7%,
     hsl(256, 84%, 48%) 112%
-  );
+  ); */
 }
 
 /* Curseur circulaire */
@@ -69,9 +79,14 @@
   height: 64px;
   background: linear-gradient(
     95deg,
+    hsl(45, 97%, 57%) -7%,
+    /* or vif */ hsl(40, 84%, 48%) 112% /* or profond */
+  );
+  /* background: linear-gradient(
+    95deg,
     hsl(286, 97%, 57%) -7%,
     hsl(256, 84%, 48%) 112%
-  );
+  ); */
   position: absolute;
   top: -82px;
   left: -16px;

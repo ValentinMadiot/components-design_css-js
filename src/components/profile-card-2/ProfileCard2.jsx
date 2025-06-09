@@ -11,8 +11,8 @@ const ProfileCard2 = () => {
           </div>
         </div>
 
-        <h3 className="card2__name">Mynton Moore</h3>
-        <span className="card2__profession">Frontend Developer</span>
+        <h3 className="card2__name">Lucas Martin</h3>
+        <span className="card2__profession">Développeur Frontend</span>
 
         <div className="card2__info">
           <div className="card2__info-icon">
@@ -30,11 +30,9 @@ const ProfileCard2 = () => {
           </div>
 
           <div className="card2__info-data">
-            <h3 className="card2__info-name">Jules Moore Mynton</h3>
-            <span className="card2__info-profession">
-              Master in Frontend Developer
-            </span>
-            <span className="card2__info-location">Lima - Perú</span>
+            <h3 className="card2__info-name">Lucas Martin</h3>
+            <span className="card2__info-profession">Expert Frontend</span>
+            <span className="card2__info-location">Paris - France</span>
           </div>
 
           <div className="card2__info-social">

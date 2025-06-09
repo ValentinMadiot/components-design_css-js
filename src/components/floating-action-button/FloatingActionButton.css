@@ -2,8 +2,8 @@
 
 /* SECTION */
 .floating__section {
-  min-height: 100vh;
-  background-color: hsl(234, 48%, 97%);
+  /* min-height: 100vh; */
+  background: var(--color-section);
   display: grid;
   place-items: center;
   font-family: "Poppins", sans-serif;
@@ -28,7 +28,7 @@
   width: 70px;
   height: 70px;
   font-size: 2rem;
-  color: hsl(234, 62%, 56%);
+  color: hsl(222, 24%, 8%);
   box-shadow: -6px -6px 24px hsl(234, 48%, 98%), 6px 6px 24px hsl(234, 48%, 88%),
     inset 6px 6px 24px hsl(234, 48%, 98%),
     inset -6px -6px 24px hsl(234, 48%, 88%);

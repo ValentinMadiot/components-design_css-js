@@ -4,7 +4,7 @@
 .faq__questions {
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
-  background: hsl(210, 36%, 96%);
+  background: var(--color-section);
   color: hsl(209, 61%, 16%);
   line-height: 1.5;
   font-size: 0.875rem;

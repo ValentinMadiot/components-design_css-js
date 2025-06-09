@@ -3,11 +3,16 @@
 .tabs__section {
   min-height: 100vh;
   padding: 5rem 0;
-  background: hsl(210, 36%, 96%);
+  background: var(--color-section);
   font-family: "Open Sans", sans-serif;
   color: hsl(209, 61%, 16%);
   font-size: 0.875rem;
   line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 .tabs__section-center {
   width: 90vw;
@@ -88,6 +93,7 @@
 
 .tabs__content {
   display: none;
+  text-align: initial;
 }
 .tabs__content.active {
   display: block;
@@ -133,5 +139,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .tabs__tab-btn {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
   }
 }

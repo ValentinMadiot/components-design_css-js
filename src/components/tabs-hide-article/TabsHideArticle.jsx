@@ -17,7 +17,7 @@ const tabsData = [
   },
   {
     id: "oceans",
-    title: "Océans",
+    title: "Océan",
     content: (
       <>
         <p>
@@ -35,7 +35,7 @@ const tabsData = [
   },
   {
     id: "montagnes",
-    title: "Montagnes",
+    title: "Montagne",
     content: (
       <p>
         Les montagnes offrent des paysages spectaculaires et sont essentielles

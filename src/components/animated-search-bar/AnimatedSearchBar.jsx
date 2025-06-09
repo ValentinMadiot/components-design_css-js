@@ -15,7 +15,7 @@ const AnimatedSearchBar = () => {
         className={`search__form ${isOpen ? "show-search" : ""}`}>
         <input
           type="search"
-          placeholder="Type something..."
+          placeholder="Tapez quelque chose..."
           name="q"
           className="search__input"
         />

@@ -26,8 +26,8 @@ const ProfileCard1 = () => {
           <img src={profileImage} alt="user profil" className="card1__img" />
         </div>
 
-        <h3 className="card1__name">Emily Jules</h3>
-        <span className="card1__profession">UI/UX Designer</span>
+        <h3 className="card1__name">Camille Dupont</h3>
+        <span className="card1__profession">Designer UI/UX</span>
 
         <div className="card1__social" ref={socialRef}>
           <div className="card1__social-control">
@@ -35,7 +35,7 @@ const ProfileCard1 = () => {
               <i className="ri-add-line"></i>
             </div>
 
-            <span className="card1__social-text">My social networks</span>
+            <span className="card1__social-text">Mes réseaux Sociaux</span>
 
             <ul className="card1__social-list">
               <a

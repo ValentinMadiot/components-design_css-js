@@ -3,14 +3,15 @@
 /* Base */
 .countdown__section {
   width: 100%;
-  padding: 5rem 1rem;
+  padding: 0rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
-  background: hsl(210, 36%, 96%);
-  color: hsl(209, 61%, 16%);
+  background: var(--color-section);
+  color: #c59d5f;
+  /* color: hsl(209, 61%, 16%); */
   line-height: 1.5;
   font-size: 0.875rem;
   text-align: center;
@@ -20,7 +21,8 @@
 .countdown__giveaway {
   font-size: 1rem;
   margin-bottom: 2rem;
-  color: hsl(205, 63%, 48%);
+  /* color: #c59d5f; */
+  /* color: hsl(205, 63%, 48%); */
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -35,7 +37,8 @@
 
 /* Bloc individuel (jours, heures, etc.) */
 .countdown__deadline-format {
-  background: hsl(209, 61%, 16%);
+  background: #c59d5f;
+  /* background: hsl(209, 61%, 16%); */
   color: #fff;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -46,9 +49,6 @@
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-}
-.countdown__deadline-format:hover {
-  /* transform: translateY(-5px); */
 }
 
 /* Chiffres */
@@ -64,7 +64,7 @@
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: hsl(210, 22%, 89%);
+  color: white;
 }
 
 /* Responsive */

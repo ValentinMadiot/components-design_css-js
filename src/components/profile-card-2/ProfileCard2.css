@@ -33,10 +33,10 @@
 }
 .card2__card {
   position: relative;
-  width: 290px;
+  width: 275px;
   background: var(--color-gradient-card2);
   border-radius: 1rem 1rem 11rem 11rem;
-  padding: 2.5rem 1.5rem 3.5rem;
+  padding: 2rem 1rem 2.5rem;
   text-align: center;
   box-shadow: 0 8px 32px hsla(178, 55%, 20%, 0.15);
 }
@@ -80,10 +80,10 @@
 .card2__info {
   position: absolute;
   top: -1px;
-  left: 0;
+  left: 0px;
   width: 100%;
   background: var(--white-color);
-  padding: 2.5rem 1.5rem 3.3rem;
+  padding: 1.5rem 1rem 2.6rem;
   border-radius: 1rem 1rem 11rem 11rem;
   clip-path: circle(16px at 250px 40px);
   transition: clip-path 0.4s ease-in-out;
@@ -95,7 +95,7 @@
 .card2__info-icon {
   position: absolute;
   top: 1.5rem;
-  right: 1.5rem;
+  right: 0.6rem;
   font-size: 1.5rem;
   color: var(--first-color-card2);
   display: inline-flex;

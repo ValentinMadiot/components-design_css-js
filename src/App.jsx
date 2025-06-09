@@ -1,34 +1,47 @@
-// import Home from "./pages/Home";
-// import ProfileCard1 from "./components/profile-card-1/ProfileCard1";
-// import ProfileCard2 from "./components/profile-card-2/ProfileCard2";
-// import FaqToggleBtn from "./components/faq-toggle-btn/FaqToggleBtn";
-// import TabsHideArticle from "./components/tabs-hide-article/TabsHideArticle";
-// import Countdown from "./components/countdown/Countdown";
-// import LoadingAnimationDots from "./components/loading-animation-dots/LoadingAnimationDots";
-// import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
-// import RangeSlider from "./components/range-slider/RangeSlider";
-// import FloatingActionButton from "./components/floating-action-button/FloatingActionButton";
+import Home from "./pages/Home";
+
+import ProfileCard1 from "./components/profile-card-1/ProfileCard1";
+import ProfileCard2 from "./components/profile-card-2/ProfileCard2";
+
+import TabsHideArticle from "./components/tabs-hide-article/TabsHideArticle";
+
+import LoadingAnimationDots from "./components/loading-animation-dots/LoadingAnimationDots";
+
+import FaqToggleBtn from "./components/faq-toggle-btn/FaqToggleBtn";
+
+import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
+import Countdown from "./components/countdown/Countdown";
+import FloatingActionButton from "./components/floating-action-button/FloatingActionButton";
+import RangeSlider from "./components/range-slider/RangeSlider";
 
 import AudioVisualizer from "./components/audio-visualizer/AudioVisualizer";
 
 function App() {
   return (
-    // <Home />
+    <>
+      <Home />
 
-    // <ProfileCard1 />
-    // <ProfileCard2 />
+      <section className="section-grid1">
+        <ProfileCard1 />
+        <ProfileCard2 />
+      </section>
 
-    // <FaqToggleBtn />
-    // <TabsHideArticle />
+      <TabsHideArticle />
 
-    // <LoadingAnimationDots />
+      <LoadingAnimationDots />
 
-    // <AnimatedSearchBar />
-    // <Countdown />
-    // <RangeSlider />
-    // <FloatingActionButton />
+      <section className="section-grid2">
+        <FaqToggleBtn />
+        <div className="section-grid2__right">
+          <AnimatedSearchBar />
+          <Countdown />
+          <RangeSlider />
+          <FloatingActionButton />
+        </div>
+      </section>
 
-    <AudioVisualizer />
+      <AudioVisualizer />
+    </>
   );
 }
 

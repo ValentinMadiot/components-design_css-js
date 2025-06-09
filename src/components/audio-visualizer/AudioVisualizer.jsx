@@ -45,7 +45,7 @@ const AudioVisualizer = () => {
 
         analyser.getByteFrequencyData(dataArray);
 
-        ctx.fillStyle = "#000";
+        ctx.fillStyle = "#0D1117";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         let x = 0;
