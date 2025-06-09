@@ -21,7 +21,7 @@ function App() {
     <>
       <Home />
 
-      <section className="section-grid1" id="profil">
+      <section className="section-grid1" id="design1">
         <ProfileCard1 />
         <ProfileCard2 />
       </section>
@@ -30,7 +30,7 @@ function App() {
 
       <LoadingAnimationDots />
 
-      <section className="section-grid2">
+      <section className="section-grid2" id="design4">
         <FaqToggleBtn />
         <div className="section-grid2__right">
           <AnimatedSearchBar />

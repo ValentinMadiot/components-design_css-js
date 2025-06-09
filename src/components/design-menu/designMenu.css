@@ -1,0 +1,72 @@
+.design-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  padding-bottom: 5rem;
+}
+
+.design-menu button {
+  width: 6rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #170d0d;
+  border: 2px solid var(--color-muted);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.design-menu button:nth-child(1) {
+  color: hsl(29, 16%, 10%);
+  background: linear-gradient(135deg, hsl(29, 80%, 58%), hsl(29, 80%, 70%));
+}
+.design-menu button:nth-child(1):hover {
+  background: linear-gradient(180deg, hsl(29, 80%, 58%), hsl(29, 80%, 70%));
+}
+
+.design-menu button:nth-child(2) {
+  color: hsl(209, 61%, 16%);
+  background: hsl(212, 33%, 89%);
+}
+.design-menu button:nth-child(2):hover {
+  background-color: hsl(212, 33%, 80%);
+}
+
+.design-menu button:nth-child(3) {
+  background: #0d1117;
+  color: var(--white-color);
+}
+.design-menu button:nth-child(3):hover {
+  background-color: #161b22;
+}
+
+.design-menu button:nth-child(4) {
+  background: #f1f5f8;
+  color: #c59d5f;
+}
+.design-menu button:nth-child(4):hover {
+  background: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .design-menu {
+    gap: 2rem;
+  }
+  .design-menu button {
+    width: 5.5rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .design-menu {
+    gap: 1.5rem;
+  }
+  .design-menu button {
+    width: 4.5rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+  }
+}

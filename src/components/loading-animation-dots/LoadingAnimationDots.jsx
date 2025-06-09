@@ -23,14 +23,13 @@ const LoadingAnimationDots = () => {
 
     addAnimate();
 
-    // 🧹 Cleanup to avoid infinite loop on unmount
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, []);
 
   return (
-    <section className="loading__container">
+    <section className="loading__container" id="design3">
       <h1 className="loading__title">
         Loading
         <div className="loading__dots" ref={dotsRef}>
