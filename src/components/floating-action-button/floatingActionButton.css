@@ -4,7 +4,7 @@
 .floating__section {
   /* min-height: 100vh; */
   background: black;
-  /* background: var(--color-section); */
+  background: var(--color-section);
   display: grid;
   place-items: center;
   font-family: "Poppins", sans-serif;
@@ -56,14 +56,19 @@
   width: 40px;
   height: 40px;
 }
+.floating__link {
+  background: transparent;
+}
 
 .floating__icon {
-  font-size: 1rem;
-  color: hsl(234, 12%, 24%);
+  transition: box-shadow 0.3s ease-in-out;
   box-shadow: -4px -4px 16px hsl(234, 48%, 98%), 4px 4px 16px hsl(234, 48%, 90%),
     inset 4px 4px 16px hsl(234, 48%, 98%),
     inset -4px -4px 16px hsl(234, 48%, 90%);
-  transition: box-shadow 0.3s ease-in-out;
+}
+.floating__menu.active .floating__icon {
+  font-size: 1rem;
+  color: hsl(234, 12%, 24%);
 }
 
 .floating__icon:hover {
