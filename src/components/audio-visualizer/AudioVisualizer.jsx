@@ -1,66 +1,95 @@
 import { useEffect, useRef } from "react";
-import "./AudioVisualizer.css";
+import musique from "./assets/son/RodrigoyGabriela-Tamacun.mp3";
+import "./audioVisualizer.css";
 
 const AudioVisualizer = () => {
   const canvasRef = useRef(null);
   const audioRef = useRef(null);
 
+  const audioContextRef = useRef(null);
+  const sourceRef = useRef(null);
+  const analyserRef = useRef(null);
+
   useEffect(() => {
-    const audioPlayer = audioRef.current;
+    const audio = audioRef.current;
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
 
-    const handlePlay = () => {
-      const contexteAudio = new (window.AudioContext ||
-        window.webkitAudioContext)();
-      const src = contexteAudio.createMediaElementSource(audioPlayer);
-      const analyseur = contexteAudio.createAnalyser();
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-      const canvas = canvasRef.current;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      const ctx = canvas.getContext("2d");
+    const setupAudioContext = () => {
+      if (!audioContextRef.current) {
+        audioContextRef.current = new (window.AudioContext ||
+          window.webkitAudioContext)();
+        sourceRef.current =
+          audioContextRef.current.createMediaElementSource(audio);
+        analyserRef.current = audioContextRef.current.createAnalyser();
 
-      src.connect(analyseur);
-      analyseur.connect(contexteAudio.destination);
+        sourceRef.current.connect(analyserRef.current);
+        analyserRef.current.connect(audioContextRef.current.destination);
+        analyserRef.current.fftSize = 1024;
+      }
+    };
 
-      analyseur.fftSize = 1024;
-      const frequencesAudio = analyseur.frequencyBinCount;
-      const tableauFrequences = new Uint8Array(frequencesAudio);
+    const renderBars = () => {
+      const analyser = analyserRef.current;
+      if (!analyser) return;
 
-      const largeurBarre = canvas.width / tableauFrequences.length + 2;
-      let hauteurBarre;
-      let x;
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray = new Uint8Array(bufferLength);
+      const barWidth = canvas.width / bufferLength;
 
-      function retourneBarres() {
-        requestAnimationFrame(retourneBarres);
-        x = 0;
-        analyseur.getByteFrequencyData(tableauFrequences);
+      const draw = () => {
+        requestAnimationFrame(draw);
+
+        analyser.getByteFrequencyData(dataArray);
 
         ctx.fillStyle = "#000";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        for (let i = 0; i < frequencesAudio; i++) {
-          hauteurBarre = tableauFrequences[i];
+        let x = 0;
+        for (let i = 0; i < bufferLength; i++) {
+          const barHeight = dataArray[i];
           ctx.fillStyle = `rgb(250, 50, ${i})`;
-          ctx.fillRect(x, canvas.height, largeurBarre, -hauteurBarre);
-          x += largeurBarre + 1;
+          ctx.fillRect(x, canvas.height, barWidth, -barHeight);
+          x += barWidth + 1.5;
         }
-      }
+      };
 
-      retourneBarres();
+      draw();
     };
 
-    audioPlayer.addEventListener("play", handlePlay);
-    return () => audioPlayer.removeEventListener("play", handlePlay);
+    const handlePlay = () => {
+      setupAudioContext();
+      renderBars();
+    };
+
+    audio.addEventListener("play", handlePlay);
+
+    const handleKeydown = (e) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeydown);
+
+    return () => {
+      audio.removeEventListener("play", handlePlay);
+      window.removeEventListener("keydown", handleKeydown);
+    };
   }, []);
 
   return (
     <div className="audio-visualizer">
       <canvas ref={canvasRef}></canvas>
-      <audio
-        ref={audioRef}
-        controls
-        src="son/Rodrigo y Gabriela - Tamacun.mp3"
-      />
+      <audio ref={audioRef} controls src={musique} />
     </div>
   );
 };
