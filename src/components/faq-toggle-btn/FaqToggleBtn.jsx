@@ -37,7 +37,7 @@ const Questions = () => {
       text: "Absolument ! Nous travaillons avec des producteurs locaux pour garantir des produits frais et de qualité tout en soutenant l’économie de la région.",
     },
     {
-      title: "Utilisez-vous des ingrédients biologiques ?",
+      title: "Utilisez-vous des ingrédients bio ?",
       text: "Oui, dans la mesure du possible, nous privilégions les ingrédients biologiques pour offrir des plats sains et respectueux de l’environnement.",
     },
   ];

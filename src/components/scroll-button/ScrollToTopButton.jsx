@@ -8,7 +8,7 @@ const ScrollToTopButton = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const section = document.getElementById("profil");
+      const section = document.getElementById("design1");
       if (section) {
         const sectionTop = section.offsetTop;
         setShowButton(scrollY >= sectionTop);

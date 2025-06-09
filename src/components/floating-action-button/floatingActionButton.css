@@ -3,7 +3,8 @@
 /* SECTION */
 .floating__section {
   /* min-height: 100vh; */
-  background: var(--color-section);
+  background: black;
+  /* background: var(--color-section); */
   display: grid;
   place-items: center;
   font-family: "Poppins", sans-serif;
@@ -91,6 +92,7 @@
 .floating__menu.active .floating__link {
   opacity: 1;
   pointer-events: auto;
+  background-color: transparent;
 }
 
 .floating__menu.active li:nth-child(1) {
