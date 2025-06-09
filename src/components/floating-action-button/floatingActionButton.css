@@ -65,8 +65,6 @@
   box-shadow: -4px -4px 16px hsl(234, 48%, 98%), 4px 4px 16px hsl(234, 48%, 90%),
     inset 4px 4px 16px hsl(234, 48%, 98%),
     inset -4px -4px 16px hsl(234, 48%, 90%);
-}
-.floating__menu.active .floating__icon {
   font-size: 1rem;
   color: hsl(234, 12%, 24%);
 }
