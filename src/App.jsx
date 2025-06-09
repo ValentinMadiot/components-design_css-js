@@ -21,7 +21,7 @@ function App() {
     <>
       <Home />
 
-      <section className="section-grid1">
+      <section className="section-grid1" id="profil">
         <ProfileCard1 />
         <ProfileCard2 />
       </section>
