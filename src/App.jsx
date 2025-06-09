@@ -7,11 +7,9 @@
 // import LoadingAnimationDots from "./components/loading-animation-dots/LoadingAnimationDots";
 // import AnimatedSearchBar from "./components/animated-search-bar/AnimatedSearchBar";
 // import RangeSlider from "./components/range-slider/RangeSlider";
-import FloatingActionButton from "./components/floating-action-button/FloatingActionButton";
+// import FloatingActionButton from "./components/floating-action-button/FloatingActionButton";
 
-// import AudioVisualizer from "./components/audio-visualizer/AudioVisualizer";
-
-// import ColorGradientTool from "./components/color-gradient-tool/ColorGradientTool";
+import AudioVisualizer from "./components/audio-visualizer/AudioVisualizer";
 
 function App() {
   return (
@@ -28,11 +26,9 @@ function App() {
     // <AnimatedSearchBar />
     // <Countdown />
     // <RangeSlider />
-    <FloatingActionButton />
+    // <FloatingActionButton />
 
-    // <AudioVisualizer />
-
-    // <ColorGradientTool />
+    <AudioVisualizer />
   );
 }
 
