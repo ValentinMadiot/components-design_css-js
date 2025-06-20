@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
+:root {
+  --clr-gold: #c59d5f;
+  --clr-dark: hsl(209, 61%, 16%);
+  --clr-gray: hsl(210, 22%, 49%);
+  --color-section: #f1f5f8;
+}
+
 .faq__questions {
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
   background: var(--color-section);
-  color: hsl(209, 61%, 16%);
+  color: var(--clr-dark);
   line-height: 1.5;
   font-size: 0.875rem;
   padding: 4rem 1rem;
@@ -23,7 +30,7 @@
   font-family: "Great Vibes", cursive;
   text-align: center;
   text-transform: capitalize;
-  color: #c59d5f;
+  color: var(--clr-gold);
   margin-bottom: 0.75rem;
 }
 
@@ -32,6 +39,7 @@
   margin: 0 auto;
 }
 
+/* ===== Bloc question ===== */
 .faq__question {
   background: #fff;
   border-radius: 0.5rem;
@@ -41,56 +49,52 @@
   text-align: left;
 }
 
+/* Titre + bouton */
 .faq__question-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-transform: capitalize;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 .faq__question-title p {
   margin-right: 1rem;
-  /* font-weight: 600; */
   font-size: 1rem;
   letter-spacing: 0.25rem;
-  color: hsl(209, 61%, 16%);
+  color: var(--clr-dark);
+  text-transform: capitalize;
 }
 
+/* ===== Bouton toggle ===== */
 .faq__question-btn {
-  font-size: 1.5rem;
   background: transparent;
-  border-color: transparent;
-  color: #c59d5f;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s linear;
+  padding: 0;
+  font-size: 1.5rem;
+  color: var(--clr-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.faq__question-btn:hover {
-  transform: rotate(180deg);
+.faq__question-title:hover .faq__icon,
+.faq__question-btn:hover .faq__icon {
+  transform: rotate(90deg);
 }
 
+/* Icône dynamique (+ ou -) */
+.faq__icon {
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* ===== Réponse texte ===== */
 .faq__question-text {
   padding: 1rem 0 1.5rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  display: none;
   font-size: 1rem;
-}
-
-.faq__question-text p {
-  margin: 0;
-  color: hsl(210, 22%, 49%);
-}
-
-.faq__show-text .faq__question-text {
-  display: block;
-}
-.faq__minus-icon {
-  display: none;
-}
-.faq__show-text .faq__minus-icon {
-  display: inline;
-}
-.faq__show-text .faq__plus-icon {
-  display: none;
+  color: var(--clr-gray);
 }

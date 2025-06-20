@@ -2,31 +2,32 @@ import { useState } from "react";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
 import "./faqToggleBtn.css";
 
-const Question = ({ title, text }) => {
-  const [showText, setShowText] = useState(false);
-
+const Question = ({ title, text, isOpen, onToggle }) => {
   return (
-    <article className={`faq__question ${showText ? "faq__show-text" : ""}`}>
-      <div className="faq__question-title">
+    <article className={`faq__question ${isOpen ? "faq__show-text" : ""}`}>
+      <div className="faq__question-title" onClick={onToggle}>
         <p>{title}</p>
-        <button
-          type="button"
-          className="faq__question-btn"
-          onClick={() => setShowText(!showText)}>
-          <span className="faq__plus-icon">
-            <FaPlusSquare />
-          </span>
-          <span className="faq__minus-icon">
-            <FaMinusSquare />
-          </span>
+        <button type="button" className="faq__question-btn">
+          {isOpen ? (
+            <FaMinusSquare className="faq__icon" />
+          ) : (
+            <FaPlusSquare className="faq__icon" />
+          )}
         </button>
       </div>
-      <div className="faq__question-text">{showText && <p>{text}</p>}</div>
+
+      {isOpen && (
+        <div className="faq__question-text">
+          <p>{text}</p>
+        </div>
+      )}
     </article>
   );
 };
 
 const Questions = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
   const questionsData = [
     {
       title: "Acceptez-vous toutes les cartes de crédit ?",
@@ -42,6 +43,10 @@ const Questions = () => {
     },
   ];
 
+  const handleToggle = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <section className="faq__questions">
       <div className="faq__title">
@@ -49,7 +54,13 @@ const Questions = () => {
       </div>
       <div className="faq__section">
         {questionsData.map((q, index) => (
-          <Question key={index} title={q.title} text={q.text} />
+          <Question
+            key={index}
+            title={q.title}
+            text={q.text}
+            isOpen={openIndex === index}
+            onToggle={() => handleToggle(index)}
+          />
         ))}
       </div>
     </section>
