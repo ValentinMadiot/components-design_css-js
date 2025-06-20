@@ -29,7 +29,7 @@ const LoadingAnimationDots = () => {
   }, []);
 
   return (
-    <section className="loading__container" id="design3">
+    <section className="loading__container" id="design4">
       <h1 className="loading__title">
         Loading
         <div className="loading__dots" ref={dotsRef}>

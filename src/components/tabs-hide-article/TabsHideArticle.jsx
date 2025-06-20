@@ -52,7 +52,7 @@ const TabsHideArticle = () => {
   const [activeTab, setActiveTab] = useState(tabsData[1].id);
 
   return (
-    <section className="tabs__section" id="design2">
+    <section className="tabs__section" id="design3">
       <div className="tabs__title">
         <h2>À la découverte de la nature</h2>
         <p>

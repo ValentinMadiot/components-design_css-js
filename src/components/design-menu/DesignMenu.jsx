@@ -18,10 +18,11 @@ const buttonVariants = {
 };
 
 const sections = [
-  { id: "design1", label: "Profil" },
-  { id: "design2", label: "Tabs" },
-  { id: "design3", label: "Load" },
-  { id: "design4", label: "FAQ" },
+  { id: "design1", label: "Price" },
+  { id: "design2", label: "Profil" },
+  { id: "design3", label: "Tabs" },
+  { id: "design4", label: "Load" },
+  { id: "design5", label: "FAQ" },
 ];
 
 const DesignMenu = () => {

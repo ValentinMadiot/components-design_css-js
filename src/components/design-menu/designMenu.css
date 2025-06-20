@@ -12,41 +12,37 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #170d0d;
-  border: 2px solid var(--color-muted);
+  border: 2px solid hsl(0, 0%, 95%);
   border-radius: 0.5rem;
   cursor: pointer;
 }
 
-.design-menu button:nth-child(1) {
-  color: hsl(29, 16%, 10%);
-  background: linear-gradient(135deg, hsl(29, 80%, 58%), hsl(29, 80%, 70%));
+.design-menu button {
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 8%);
 }
-.design-menu button:nth-child(1):hover {
-  background: linear-gradient(180deg, hsl(29, 80%, 58%), hsl(29, 80%, 70%));
+.design-menu button:hover {
+  color: hsl(0, 0%, 95%);
 }
 
-.design-menu button:nth-child(2) {
-  color: hsl(209, 61%, 16%);
-  background: hsl(212, 33%, 89%);
+.design-menu button:nth-child(1):hover {
+  background: linear-gradient(
+    157deg,
+    hsl(210, 96%, 69%) -12%,
+    hsl(210, 96%, 54%) 109%
+  );
 }
 .design-menu button:nth-child(2):hover {
-  background-color: hsl(212, 33%, 80%);
-}
-
-.design-menu button:nth-child(3) {
-  background: #0d1117;
-  color: var(--white-color);
+  background: linear-gradient(135deg, hsl(175, 55%, 40%), hsl(175, 30%, 48%));
 }
 .design-menu button:nth-child(3):hover {
-  background-color: #161b22;
-}
-
-.design-menu button:nth-child(4) {
-  background: #f1f5f8;
-  color: #c59d5f;
+  background: hsl(209, 61%, 16%);
 }
 .design-menu button:nth-child(4):hover {
-  background: #e2e8f0;
+  background: #0d1117;
+}
+.design-menu button:nth-child(5):hover {
+  background: #c59d5f;
 }
 
 @media (max-width: 768px) {

@@ -48,7 +48,7 @@ const pricingPlans = [
 const PricingCards = () => {
   return (
     <div className="price__body">
-      <section className="price__card container grid">
+      <section className="price__card container grid" id="design1">
         <div className="price__container grid">
           {pricingPlans.map((plan, index) => (
             <article key={index} className="price__content grid">
