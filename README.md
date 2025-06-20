@@ -20,16 +20,17 @@ Chaque composant est autonome, stylisé avec soin et pensé pour être modulaire
 
 La collection comprend notamment :
 
+- Un effet de texte
+- Une section de carte de tarification
 - Des cartes de profils esthétiques
 - Un système d’onglets (Tabs)
 - Une page de chargement animée
 - Un menu déroulant animé
-- Un décompte dynamique
 - Une barre de recherche animée
-- Un bouton flottant avec menu radial
+- Un décompte dynamique
 - Un curseur de sélection animé
+- Un bouton flottant avec menu radial
 - Un bouton de retour en haut de page
-- Un effet de texte
 - Un affichage graphique au rythme de la musique
 
 ## <br /> <a name="technologies">🛠️ Technologies</a>
