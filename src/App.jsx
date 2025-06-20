@@ -1,5 +1,7 @@
 import Home from "./pages/Home";
 
+import PricingCards from "./components/pricing-card/PrincingCard";
+
 import ProfileCard1 from "./components/profile-card-1/ProfileCard1";
 import ProfileCard2 from "./components/profile-card-2/ProfileCard2";
 
@@ -20,6 +22,8 @@ function App() {
   return (
     <>
       <Home />
+
+      <PricingCards />
 
       <section className="section-grid1" id="design1">
         <ProfileCard1 />
