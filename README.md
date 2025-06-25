@@ -3,7 +3,7 @@
     <img src=".docs/preview.png" alt="Aperçu des composants design">  
   </a>  
   </br></br>  
-  <h3 align="center">🎨 Composants Design</h3>  
+  <h3 align="center">🎨 Composants Design UI</h3>  
 </div>
 
 ## <br /> 📌 Sommaire
@@ -15,7 +15,8 @@
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
 
-Ce projet regroupe une série de composants UI animés sous React, destinés à enrichir visuellement n’importe quelle application web.  
+Ce projet regroupe une série de composants UI animés sous React, destinés à enrichir visuellement n’importe quelle application web.
+
 Chaque composant est autonome, stylisé avec soin et pensé pour être modulaire, responsive et réutilisable facilement.
 
 La collection comprend notamment :
@@ -38,40 +39,44 @@ La collection comprend notamment :
 - React 18 avec `create-react-app`
 - CSS natif modulaire (1 fichier par composant)
 - Hooks React : `useState`, `useEffect`, `useRef`
-- Framer Motion (pour les animations de menu ou reveal)
-- Icons : Remix Icons / React Icons
+- Framer Motion pour les animations de menu ou reveal
+- Remix Icons & React Icons
 - Responsive Design
-- Déployé avec [Vercel](https://components-design.vercel.app)
+- Déployé avec [**Vercel**](https://components-design.vercel.app)
 
 ## <br /> <a name="fonctionnalités">🎯 Fonctionnalités</a>
 
 - UI soignée avec animations fluides
 - Composants full responsive
-- Structure modulaire par composant
+- Composants autonomes et réutilisables
 - Animations CSS + JS + Framer Motion
-- Visualisation de l’audio en temps réel avec `<canvas>`
-- Prêts à l’emploi pour tout projet React (SaaS, portfolio, dashboard, etc.)
+- Visualisation de l’audio avec `<canvas>`
+- Prêts à l’emploi pour tout projet React
 
 ## <br /> <a name="installation">🚀 Installation</a>
 
-### ✅ Pré-requis
+### ✅ Prérequis
 
-- 🛠️ **[Git](https://git-scm.com/)**
-- 🔧 **[Node.js](https://nodejs.org/)**
-- 📦 **[npm](https://www.npmjs.com/)**
+- [Git](https://git-scm.com/) &nbsp;—&nbsp; Système de gestion de versions
+- [Node.js](https://nodejs.org/fr) &nbsp;—&nbsp; Exécuteur local de scripts JavaScript
+- [npm](https://www.npmjs.com/) &nbsp;—&nbsp; Gestionnaire de paquets JavaScript
+- [Google Chrome](https://www.google.com/) &nbsp;—&nbsp; Navigateur moderne
+- [Visual Studio Code](https://code.visualstudio.com/) &nbsp;—&nbsp; Éditeur de code
 
 ### 📥 Cloner le projet
 
 ```bash
-git clone https://github.com/ValentinMadiot/components-design_ui.git
+git clone https://github.com/ValentinMadiot/components-design_ui
 ```
 
-### ▶️ Lancer l’application
+### ▶️ Lancer le projet
 
-#### Frontend (port : 3000)
+#### Frontend
 
 ```bash
 cd components-design_ui
 npm install
 npm start
 ```
+
+Frontend disponible sur : `http://localhost:3000`
