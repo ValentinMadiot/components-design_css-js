@@ -1,9 +1,9 @@
 <div align="center">  
-  <a href="https://components-design.vercel.app" target="_blank">  
-    <img src=".docs/preview.png" alt="Aperçu des composants design">  
+  <a href="https://components-modern.vercel.app" target="_blank">  
+    <img src=".docs/preview.png" alt="Aperçu des composants modern">  
   </a>  
   </br></br>  
-  <h3 align="center">🎨 Composants Design UI</h3>  
+  <h3 align="center">🎨 Composants UI Modernes</h3>  
 </div>
 
 ## <br /> 📌 Sommaire
@@ -42,7 +42,7 @@ La collection comprend notamment :
 - Framer Motion pour les animations de menu ou reveal
 - Remix Icons & React Icons
 - Responsive Design
-- Déployé avec [**Vercel**](https://components-design.vercel.app)
+- Déployé avec [**Vercel**](https://components-modern.vercel.app)
 
 ## <br /> <a name="fonctionnalités">🎯 Fonctionnalités</a>
 
@@ -66,7 +66,8 @@ La collection comprend notamment :
 ### 📥 Cloner le projet
 
 ```bash
-git clone https://github.com/ValentinMadiot/components-design_ui
+git clone https://github.com/ValentinMadiot/components-modern_ui
+cd components-modern_ui
 ```
 
 ### ▶️ Lancer le projet
@@ -74,7 +75,6 @@ git clone https://github.com/ValentinMadiot/components-design_ui
 #### Frontend
 
 ```bash
-cd components-design_ui
 npm install
 npm start
 ```

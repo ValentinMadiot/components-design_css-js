@@ -3,7 +3,7 @@ import regexString from "./regexString";
 import "./textReveal.css";
 
 function TextReveal() {
-  const headingChars = regexString("Composants Design UI");
+  const headingChars = regexString("Composants UI Modernes");
   const textChars = regexString(
     "Découvrez une collection de composants visuels modernes et animés"
   );
